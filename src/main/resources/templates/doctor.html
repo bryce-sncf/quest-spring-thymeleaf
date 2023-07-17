@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Doctor Secret Room</title>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
-    <link rel="stylesheet" href="css/style.css">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header>Header TODO</header>
-<section>
-    <h1>Welcome $doctorname</h1>
-    <h3>Your number is $doctornumber</h3>
-</section>
-<footer>Footer TODO</footer>
-</body>
+    <header th:include="fragments/header :: header"></header>
+    <section>
+        <h1>Welcome <span th:text="${doctor.name}">${doctor.name}</span></h1>
+        <h3>Your number is <span th:text="${doctor.number}">${doctor.number}</span></h3>
+    </section>
+    <footer th:include="fragments/footer :: footer"></footer>
+    <body>
 </html>
